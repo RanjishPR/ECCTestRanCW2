@@ -29,6 +29,7 @@ modules:
     parameters:
       app-name: BusinessPartnerValidation-db
       memory: 128MB
+      buildpack: nodejs_buildpack
   - name: BusinessPartnerValidation-launchpad
     type: com.sap.application.content
     requires:
@@ -91,7 +92,8 @@ modules:
       commands:
         - npm install
         - npm run build
-      supported-platforms: []
+      supported-platforms:
+        []
 
 resources:
   - name: BusinessPartnerValidation-db
